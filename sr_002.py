@@ -5,20 +5,31 @@ brothers = 2
 delta = .00003
 hist_look = 100
 
-part = 3000
+part = 100
 
-df = pd.read_excel('./data/eurousd_1h.xlsx')
-#['Date' 'Open' 'High' 'Low' 'Close']
+df = pd.read_csv('./data/eurousd_1h_csv.csv', delimiter=';', encoding='utf-8')
+print(df.columns.values) #['Date' 'Open' 'High' 'Low' 'Close']
 
-part = len(df)
+for i in range(len(df['Low'])):
+    try:
+        print(float(df['Low'][i]))
+    except Exception:
+        print(df['Date'][i])
+        input('error')
+
+exit()
+
+part = len(df) #закоментувати якщо потрібна частина данних
 
 high = list(df['High'])[-part:]
 low = list(df['Low'])[-part:]
 
-high = [float(el) for el in high if type(el) is str]
-low = [float(el) for el in low if type(el) is str]
+#high = [float(el) for el in high if type(el) is str]
+#low = [float(el) for el in low if type(el) is str]
 
 lo_fo = low
+print(lo_fo)
+exit()
 
 
 for i in range(hist_look, len(lo_fo)-brothers):

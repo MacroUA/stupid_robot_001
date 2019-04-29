@@ -5,13 +5,14 @@ brothers = 2
 delta = 1
 hist_look = 2*12*30
 
-part = 3000
+part = 100
 
-df = pd.read_pickle('./data/USDT_BTC_h2.pkl')
+#df = pd.read_pickle('./data/USDT_BTC_h2.pkl')
 #['close' 'date' 'high' 'low' 'open' 'quoteVolume' 'volume' 'weightedAverage']
+df = pd.read_pickle('./data/eurousd_1h_csv.pkl')
 
-high = list(df['high'])[-part:]
-low = list(df['low'])[-part:]
+high = list(df['High'])[-part:]
+low = list(df['Low'])[-part:]
 lo_fo = low
 
 
