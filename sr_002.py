@@ -22,7 +22,7 @@ lo_fo = low
 
 for i in range(hist_look, len(lo_fo)-brothers):
     if lo_fo[i] < lo_fo[i+1]+delta and lo_fo[i] > lo_fo[i+1] - delta:
-        plt.plot([0, i], [lo_fo[i], lo_fo[i]], color='gray', alpha = 0.2)
+        plt.plot([i-hist_look, i], [lo_fo[i], lo_fo[i]], color='gray', alpha = 0.2)
 
         hist_br = 0
         for o in range(i-hist_look, i):
