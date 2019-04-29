@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 brothers = 2
-
 delta = 1
 hist_look = 2*12*30
 
