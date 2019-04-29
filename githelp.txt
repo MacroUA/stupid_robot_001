@@ -1,1 +1,14 @@
-git clone 
+#clone repository to current folder
+git clone https://github.com/MacroUA/stupid_robot_001.git
+
+#download from repository to folder
+git pull
+
+#add files to workflow
+git add -A
+
+# commit added files with message
+git commit -m "message"
+
+# send files from folder to repository
+git push
